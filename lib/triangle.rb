@@ -9,7 +9,8 @@ class Triangle
 
    def kind
      if !is_valid?(@side1, @side2, @side3)
-       raise TriangleError
+       raise TriangleError => e
+       puts e.message
      else
        if side1 == side2 && side2 == side3
          :equilateral
