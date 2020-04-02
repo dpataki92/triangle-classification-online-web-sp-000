@@ -8,7 +8,7 @@ class Triangle
   end
 
    def kind
-     if is_valid? == false
+     if !is_valid?(@side1, @side2, @side3)
      begin
        raise TriangleError
      rescue TriangleError => e
@@ -25,7 +25,7 @@ class Triangle
     end
    end
 
-   def is_valid?
+   def is_valid?(side1, side2, side3)
      true_or_false = true
      if side1 <= 0 || side2 <= 0 || side3 <= 0
        true_or_false = false
