@@ -8,7 +8,7 @@ class Triangle
   end
 
    def kind
-     if !is_valid?(@side1, @side2, @side3)
+     if is_valid?(@side1, @side2, @side3) == false
      begin
        raise TriangleError
      end
