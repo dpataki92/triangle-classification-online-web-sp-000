@@ -11,8 +11,6 @@ class Triangle
      if !is_valid?(@side1, @side2, @side3)
      begin
        raise TriangleError
-     rescue TriangleError => e
-       e.message
      end
      else
        if side1 == side2 && side2 == side3
